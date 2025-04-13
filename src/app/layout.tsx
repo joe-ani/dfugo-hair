@@ -11,29 +11,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "D'Fufo Hair - Premium Quality Hair Products",
+  title: "D'Fugo Hair - Premium Quality Hair Products",
   description: "Luxury hair products and accessories. We offer all types of premium and high-quality wigs. Visit our store in Lagos Island or shop online.",
-  keywords: "hair, wigs, premium wigs, luxury hair, hair products, D'Fufo Hair, Lagos hair shop",
-  authors: [{ name: "D'Fufo Hair" }],
-  creator: "D'Fufo Hair",
-  publisher: "D'Fufo Hair",
+  keywords: "hair, wigs, premium wigs, luxury hair, hair products, D'Fugo Hair, Lagos hair shop",
+  authors: [{ name: "D'Fugo Hair" }],
+  creator: "D'Fugo Hair",
+  publisher: "D'Fugo Hair",
   formatDetection: {
     telephone: true,
     email: true,
     address: true,
   },
-  metadataBase: new URL('https://dfufohair.com'),
+  metadataBase: new URL('https://dfugohair.com'),
   openGraph: {
-    title: "D'Fufo Hair - Premium Quality Hair Products",
+    title: "D'Fugo Hair - Premium Quality Hair Products",
     description: "Luxury hair products and accessories. We offer all types of premium and high-quality wigs. Visit our store in Lagos Island or shop online.",
-    url: 'https://dfufohair.com',
-    siteName: "D'Fufo Hair",
+    url: 'https://dfugohair.com',
+    siteName: "D'Fugo Hair",
     images: [
       {
         url: '/logo.png',
         width: 800,
         height: 600,
-        alt: "D'Fufo Hair Logo",
+        alt: "D'Fugo Hair Logo",
       },
     ],
     locale: 'en_US',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "D'Fufo Hair - Premium Quality Hair Products",
+    title: "D'Fugo Hair - Premium Quality Hair Products",
     description: "Luxury hair products and accessories. We offer all types of premium and high-quality wigs.",
     images: ['/logo.png'],
   },
