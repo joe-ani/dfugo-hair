@@ -76,7 +76,7 @@ const ContactForm = () => {
                 </div>
 
                 <motion.div
-                    className="w-full md:w-[350px] h-[180px] md:h-[250px] bg-[#d4d4d4] border-2 border-white rounded-[10px] md:rounded-[20px] p-3 md:p-6 space-y-3 md:space-y-6"
+                    className="w-full md:w-[350px] h-[180px] md:h-[350px] bg-[#d4d4d4] border-2 border-white rounded-[10px] md:rounded-[20px] p-3 md:p-6 space-y-3 md:space-y-6"
                     initial={{ scale: 0.9, opacity: 0 }} // Initial state: slightly smaller and invisible
                     whileInView={{ scale: 1, opacity: 1 }} // Animate to: full size and visible
                     transition={{ duration: 0.6, delay: 0.3 }} // Animation duration with delay
@@ -121,6 +121,21 @@ const ContactForm = () => {
                         transition={{ duration: 0.2 }}
                     >
                         <Image className="object-contain w-4 md:w-5" width={20} height={20} src="/icons/whatsapp.png" alt="whatsapp" />
+                        <div className="font-normal text-xs md:text-base">@d_fugo_hair</div>
+                    </motion.a>
+                    <motion.div className="w-full h-[1px] bg-white" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.3 }}></motion.div>
+
+                    {/* facebook */}
+                    <motion.a
+                        href="https://wa.me/2347016027618?text=Hello!%20I'm%20interested%20in%20your%20wigs.%20"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 md:space-x-4 p-2 rounded cursor-pointer"
+                        whileHover={{ scale: 1.05, backgroundColor: "#d3d3d3" }}
+                        whileTap={{ scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
+                    >
+                        <Image className="object-contain w-4 md:w-5" width={20} height={20} src="/icons/facebook.png" alt="whatsapp" />
                         <div className="font-normal text-xs md:text-base">@d_fugo_hair</div>
                     </motion.a>
                 </motion.div>

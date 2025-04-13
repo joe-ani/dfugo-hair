@@ -51,7 +51,7 @@ const OpeningHours = () => {
         duration: 2,
         repeat: Infinity,
         ease: "easeInOut"
-      }
+      } 
     }
   };
 

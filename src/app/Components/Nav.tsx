@@ -16,6 +16,7 @@ const Nav = () => {
   const pathname = usePathname(); // Get the current route
   const router = useRouter();
   const [isMounted, setIsMounted] = useState(false);
+  const [pendingScroll, setPendingScroll] = useState<string | null>(null);
 
   useEffect(() => {
     setIsMounted(true);
@@ -53,6 +54,15 @@ const Nav = () => {
     }
   }, [pathname, setActiveLink]);
 
+  useEffect(() => {
+    if (pathname === '/' && pendingScroll) {
+      setTimeout(() => {
+        scrollToSection(pendingScroll);
+        setPendingScroll(null);
+      }, 100);
+    }
+  }, [pathname, pendingScroll]);
+
   const scrollToSection = (sectionId: string) => {
     if (!isMounted || typeof window === 'undefined') return;
     const element = document.getElementById(sectionId);
@@ -64,9 +74,11 @@ const Nav = () => {
   const handleNavClick = (link: string) => {
     setActiveLink(link);
     setIsMenuOpen(false);
+    const linkLower = link.toLowerCase();
 
     if (pathname === '/') {
-      switch (link.toLowerCase()) {
+      // If already on home page, just scroll to section
+      switch (linkLower) {
         case 'contact':
           scrollToSection('section7');
           break;
@@ -81,10 +93,16 @@ const Nav = () => {
           break;
       }
     } else {
-      if (link.toLowerCase() === 'home') {
+      // If not on home page
+      if (linkLower === 'home') {
         router.push('/');
-      } else {
-        router.push(`/${link.toLowerCase()}`);
+      } else if (linkLower === 'shop') {
+        router.push('/shop');
+      } else if (linkLower === 'about' || linkLower === 'contact') {
+        // Set pending scroll and navigate
+        const sectionId = linkLower === 'about' ? 'section6' : 'section7';
+        setPendingScroll(sectionId);
+        router.push('/');
       }
     }
   };

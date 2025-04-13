@@ -66,7 +66,7 @@ export default function ContactPage() {
                   <h2 className="text-2xl sm:text-3xl font-semibold mb-4">Visit Our Store</h2>
                   <p className="text-base sm:text-lg text-gray-600">
                     D&apos;Fugo Hair<br />
-                    10, Balogun street<br />
+                    23/24, Balogun street<br />
                     Lagos Island, Lagos Nigeria
                   </p>
                 </div>

@@ -141,16 +141,16 @@ const Footer = () => {
                     <div>
                         <h3 className="text-lg font-medium mb-4">Contact Us</h3>
                         <ul onClick={handleGetDirections} className="space-y-2 text-gray-400 font-light cursor-pointer">
-                            10, Balogun street<br />
+                            23/24, Balogun street<br />
                             Lagos Island, Lagos Nigeria
                         </ul>
                     </div>
 
-                    {/* Social Media - temporary version without icons */}
+                    {/* Social Media - updated version with proper Facebook link */}
                     <div>
                         <h3 className="text-lg font-medium mb-4">Follow Us</h3>
                         <div className="flex space-x-4">
-                            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
+                            <a href="https://www.facebook.com/dfugohair" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
                                 FB
                             </a>
                             <a href="https://www.tiktok.com/@d_fugo_hair" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">

@@ -8,9 +8,27 @@ type PageProps = {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
     const resolvedParams = await params;
+    // Convert slug to readable product name
+    const productName = resolvedParams.slug.split('-').map(word =>
+        word.charAt(0).toUpperCase() + word.slice(1)
+    ).join(' ');
+
     return {
-        title: `Product Details: ${resolvedParams.slug}`,
-        description: "Details for the product",
+        title: `${productName} | D'Fufo Hair`,
+        description: `Shop ${productName} at D'Fufo Hair. Premium quality hair products and luxury wigs in Lagos, Nigeria.`,
+        keywords: `${productName.toLowerCase()}, hair products, wigs, D'Fufo Hair, luxury hair, premium wigs, Lagos`,
+        openGraph: {
+            title: `${productName} | D'Fufo Hair`,
+            description: `Shop ${productName} at D'Fufo Hair. Premium quality hair products and luxury wigs in Lagos, Nigeria.`,
+            type: 'website',
+            images: ['/logo.png'], // This would ideally be the product image
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: `${productName} | D'Fufo Hair`,
+            description: `Shop ${productName} at D'Fufo Hair. Premium quality hair products and luxury wigs.`,
+            images: ['/logo.png'], // This would ideally be the product image
+        },
     };
 }
 
