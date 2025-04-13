@@ -54,15 +54,6 @@ const Nav = () => {
     }
   }, [pathname, setActiveLink]);
 
-  useEffect(() => {
-    if (pathname === '/' && pendingScroll) {
-      setTimeout(() => {
-        scrollToSection(pendingScroll);
-        setPendingScroll(null);
-      }, 100);
-    }
-  }, [pathname, pendingScroll]);
-
   const scrollToSection = (sectionId: string) => {
     if (!isMounted || typeof window === 'undefined') return;
     const element = document.getElementById(sectionId);
@@ -70,6 +61,15 @@ const Nav = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  useEffect(() => {
+    if (pathname === '/' && pendingScroll) {
+      setTimeout(() => {
+        scrollToSection(pendingScroll);
+        setPendingScroll(null);
+      }, 100);
+    }
+  }, [pathname, pendingScroll, isMounted]);
 
   const handleNavClick = (link: string) => {
     setActiveLink(link);

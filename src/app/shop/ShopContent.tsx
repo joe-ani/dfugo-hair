@@ -7,7 +7,6 @@ import { useSearchParams } from 'next/navigation'
 import { CATEGORIES } from '@/src/data/categories'
 import { COLORS } from '@/src/data/colors'
 import { databases, appwriteConfig } from '@/src/lib/appwrite'
-import { Skeleton } from "@/components/ui/skeleton"
 
 interface Product {
   $id: string;
@@ -274,7 +273,7 @@ export default function ShopContent() {
                     : 'hover:ring-1 hover:ring-gray-300'
                   }
                   ${color.id === 'mixed'
-                    ? 'bg-gradient-to-r from-pink-300 via-purple-300 via-blue-300 via-green-300 via-yellow-300 to-red-300 text-black'
+                    ? 'bg-gradient-to-r from-pink-300 via-purple-300 to-red-300 text-black'
                     : ''
                   }
                 `}

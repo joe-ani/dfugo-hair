@@ -398,8 +398,8 @@ const Hero = () => {
                         variants={heroTextVariants}
                         initial="hidden"
                         animate="visible"
-                        className="text-3xl md:text-5xl font-extrabold py-5">
-                        <p className="text-[#FEEF88]">Luxury</p> <span className="text-white">Or Nothing.</span>
+                        className="text-3xl md:text-5xl font-extrabold py-5 text-white">
+                        <span className="text-[#FEEF88]">Luxury</span> Or Nothing.
                     </motion.div>
                     <div className="w-[60%] h-[1px] bg-gradient-to-r from-[#FEEF88] to-transparent rounded-full mx-0"></div>
                     <p className="pt-8 text-[14px] md:text-[20px] w-[80%] mx-0 font-normal text-[#FFFFFF]">

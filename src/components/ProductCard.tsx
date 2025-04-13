@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { Heart } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { Skeleton } from "@/components/ui/skeleton";
 
 // Match the Appwrite data structure
 interface Product {
@@ -16,6 +17,7 @@ interface Product {
 
 interface ProductCardProps {
   product: Product;
+  isLoading?: boolean;
 }
 
 const cardVariants = {
@@ -37,7 +39,7 @@ const likeColour = {
   off: "#ffffff50"
 };
 
-export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+export const ProductCard: React.FC<ProductCardProps> = ({ product, isLoading }) => {
   const [isLiked, setIsLiked] = useState(false);
   const ref = useRef(null);
   const inView = useInView(ref);
@@ -58,6 +60,17 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       console.error("Error saving product data:", error);
     }
   };
+
+  if (isLoading) {
+    return (
+      <div className="w-[150px] h-[200px] sm:w-[200px] sm:h-[250px] relative">
+        <Skeleton className="w-full h-full rounded-[15px] sm:rounded-[25px]" />
+        <div className="absolute bottom-3 w-[90%] left-[5%]">
+          <Skeleton className="h-[70px] sm:h-[80px] rounded-[10px] sm:rounded-[15px]" />
+        </div>
+      </div>
+    );
+  }
 
   return (
     <motion.div
