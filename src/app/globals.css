@@ -38,7 +38,8 @@ body {
 
 /* Ensure consistent text rendering in Safari */
 @supports (-webkit-overflow-scrolling: touch) {
-  .text-[#FFFFFF],
+
+  [class*="text-white"],
   .text-white {
     color: #FFFFFF !important;
     -webkit-text-fill-color: #FFFFFF;

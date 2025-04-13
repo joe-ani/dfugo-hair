@@ -60,7 +60,7 @@ const AboutFugo = () => {
                     </div>
                 </motion.div>
             </motion.div>
-            <div className="w-full bg-[#ededed] z-[-10] absolute h-[73%] sm:h-[85%]"></div>
+            <div className="hidden sm:block w-full bg-gradient-to-r from-transparent via-[#ededed] to-transparent z-[-10] absolute h-[85%]"></div>
         </div>
     );
 };
