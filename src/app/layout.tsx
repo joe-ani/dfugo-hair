@@ -22,6 +22,22 @@ export const metadata: Metadata = {
     email: true,
     address: true,
   },
+  icons: {
+    icon: [
+      {
+        url: '/icons/sitelogo.png',
+        sizes: '32x32',
+        type: 'image/png'
+      },
+      {
+        url: '/icons/sitelogo.png',
+        sizes: '16x16',
+        type: 'image/png'
+      }
+    ],
+    shortcut: '/icons/sitelogo.png',
+    apple: '/icons/sitelogo.png',
+  },
   metadataBase: new URL('https://dfugohair.com'),
   openGraph: {
     title: "D'Fugo Hair - Premium Quality Hair Products",
