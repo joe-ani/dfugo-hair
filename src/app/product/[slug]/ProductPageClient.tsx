@@ -96,10 +96,31 @@ export default function ProductPageClient({ params }: Props) {
 
     if (!product) {
         return (
-            <div className="min-h-screen flex flex-col items-center justify-center bg-white text-[#333333] p-4 pt-32 sm:pt-44">
+            <div className="min-h-screen flex flex-col items-center bg-white text-[#333333] p-4 pt-32 sm:pt-44">
                 <div className="w-full max-w-6xl">
-                    {/* Loading skeleton... */}
-                    <Skeleton className="w-full h-[400px] rounded-lg" />
+                    <div className="flex flex-col md:flex-row gap-8 md:gap-12">
+                        {/* Image skeleton */}
+                        <div className="w-full md:w-1/2">
+                            <Skeleton className="w-full aspect-square rounded-2xl" />
+                            <div className="mt-4 flex gap-2">
+                                {[...Array(4)].map((_, i) => (
+                                    <Skeleton key={i} className="w-20 h-20 rounded-lg" />
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Content skeleton */}
+                        <div className="w-full md:w-1/2 space-y-4">
+                            <Skeleton className="h-8 w-3/4" />
+                            <Skeleton className="h-6 w-1/4" />
+                            <div className="space-y-2">
+                                <Skeleton className="h-4 w-full" />
+                                <Skeleton className="h-4 w-5/6" />
+                                <Skeleton className="h-4 w-4/6" />
+                            </div>
+                            <Skeleton className="h-12 w-full rounded-full mt-6" />
+                        </div>
+                    </div>
                 </div>
             </div>
         );
@@ -191,8 +212,8 @@ export default function ProductPageClient({ params }: Props) {
                                         key={index}
                                         onClick={() => setCurrentImageIndex(index)}
                                         className={`relative cursor-pointer rounded-lg overflow-hidden flex-shrink-0
-                                            ${currentImageIndex === index 
-                                                ? 'ring-2 ring-yellow-500 ring-offset-2' 
+                                            ${currentImageIndex === index
+                                                ? 'ring-2 ring-yellow-500 ring-offset-2'
                                                 : 'opacity-70 hover:opacity-100'
                                             }`}
                                         whileHover={{ scale: 1.05 }}

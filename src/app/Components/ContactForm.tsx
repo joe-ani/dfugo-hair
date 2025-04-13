@@ -5,12 +5,18 @@ import React from "react";
 
 const ContactForm = () => {
     const [message, setMessage] = React.useState("");
+    const [isLoading, setIsLoading] = React.useState(false);
 
-    const handleSendMessage = () => {
+    const handleSendMessage = async () => {
         if (message.trim()) {
-            const encodedMessage = encodeURIComponent(message);
-            window.open(`https://wa.me/2347016027618?text=${encodedMessage}`, '_blank');
-            setMessage(""); // Clear the input after sending
+            setIsLoading(true);
+            try {
+                const encodedMessage = encodeURIComponent(message);
+                window.open(`https://wa.me/2347016027618?text=${encodedMessage}`, '_blank');
+            } finally {
+                setIsLoading(false);
+                setMessage(""); // Clear the input after sending
+            }
         }
     };
 
@@ -19,10 +25,10 @@ const ContactForm = () => {
             {/* WhatsApp Section */}
             <motion.div
                 className="flex flex-col p-4 md:p-20 space-y-4 md:space-y-14"
-                initial={{ x: -100, opacity: 0 }} // Initial state: slide in from the left and invisible
-                whileInView={{ x: 0, opacity: 1 }} // Animate to: slide to position and become visible
-                transition={{ duration: 0.6 }} // Animation duration
-                viewport={{ once: true }} // Trigger animation only once
+                initial={{ x: -100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
             >
                 <div className="flex flex-col">
                     <div className="font-medium text-xs md:text-base text-black">Send us a.</div>
@@ -41,8 +47,9 @@ const ContactForm = () => {
                             type="text"
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
-                            className="w-full bg-transparent border-none outline-none text-black placeholder-black text-xs md:text-base font-thin"
+                            className="w-full bg-transparent border-none outline-none text-black placeholder-black text-xs md:text-base font-thin disabled:opacity-50"
                             placeholder="Type your message..."
+                            disabled={isLoading}
                             onKeyPress={(e) => {
                                 if (e.key === 'Enter') {
                                     handleSendMessage();
@@ -51,12 +58,22 @@ const ContactForm = () => {
                         />
                         <motion.div
                             onClick={handleSendMessage}
-                            className="ml-2 cursor-pointer"
-                            whileHover={{ scale: 1.2 }}
-                            whileTap={{ scale: 0.9 }}
+                            className={`ml-2 cursor-pointer ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                            whileHover={isLoading ? {} : { scale: 1.2 }}
+                            whileTap={isLoading ? {} : { scale: 0.9 }}
                             transition={{ duration: 0.2 }}
                         >
-                            <Image className="object-contain w-6 md:w-8" width={32} height={32} src="/icons/share.png" alt="send" />
+                            {isLoading ? (
+                                <div className="w-6 md:w-8 h-6 md:h-8 rounded-full border-2 border-black border-t-transparent animate-spin" />
+                            ) : (
+                                <Image
+                                    className="object-contain w-6 md:w-8"
+                                    width={32}
+                                    height={32}
+                                    src="/icons/share.png"
+                                    alt="send"
+                                />
+                            )}
                         </motion.div>
                     </div>
                 </motion.div>

@@ -18,11 +18,15 @@ export const metadata: Metadata = {
     description: "Browse our collection of luxury wigs and premium hair products.",
     images: ['/logo.png'],
   },
-};
+}
 
 export default function ShopPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#FEEF88]"></div>
+      </div>
+    }>
       <ShopContent />
     </Suspense>
   )

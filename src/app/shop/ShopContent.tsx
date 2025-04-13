@@ -7,9 +7,7 @@ import { useSearchParams } from 'next/navigation'
 import { CATEGORIES } from '@/src/data/categories'
 import { COLORS } from '@/src/data/colors'
 import { databases, appwriteConfig } from '@/src/lib/appwrite'
-
-// Remove products import since we're using Appwrite data
-// import { products } from "@/src/data/products"
+import { Skeleton } from "@/components/ui/skeleton"
 
 interface Product {
   $id: string;
@@ -131,7 +129,11 @@ export default function ShopContent() {
   };
 
   if (loading) {
-    return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-[#FEEF88]"></div>
+      </div>
+    );
   }
 
   // =============== RENDER METHODS ===============

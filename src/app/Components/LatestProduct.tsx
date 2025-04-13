@@ -5,9 +5,10 @@ import { motion, Variants } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 import { useActiveLink } from "../context/ActiveLinkContext";
-import { Heart, ArrowRight } from "lucide-react";
+import { Heart, ArrowRight, Loader2 } from "lucide-react";
 import { databases, appwriteConfig } from '@/src/lib/appwrite';
 import { Query } from 'appwrite';
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface Product {
   $id: string;
@@ -105,15 +106,15 @@ const LatestProduct: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="latest-product-container flex flex-col items-center space-y-12">
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[...Array(4)].map((_, i) => (
-            <div
-              key={i}
-              className="w-[150px] h-[200px] sm:w-[200px] sm:h-[250px] bg-gray-200 rounded-[15px] sm:rounded-[25px] animate-pulse"
-            />
-          ))}
-        </div>
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {[...Array(4)].map((_, index) => (
+          <div key={index} className="w-[150px] h-[200px] sm:w-[200px] sm:h-[250px] relative">
+            <Skeleton className="w-full h-full rounded-[15px] sm:rounded-[25px]" />
+            <div className="absolute bottom-3 w-[90%] left-[5%]">
+              <Skeleton className="h-[70px] sm:h-[80px] rounded-[10px] sm:rounded-[15px]" />
+            </div>
+          </div>
+        ))}
       </div>
     );
   }
