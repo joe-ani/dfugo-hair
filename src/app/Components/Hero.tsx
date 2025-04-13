@@ -398,8 +398,9 @@ const Hero = () => {
                         variants={heroTextVariants}
                         initial="hidden"
                         animate="visible"
-                        className="text-3xl md:text-5xl font-extrabold py-5 text-white">
-                        <span className="text-[#FEEF88]">Luxury</span> Or Nothing.
+                        className="flex flex-col text-3xl md:text-5xl font-extrabold py-5">
+                        <p className="text-[#FEEF88]">Luxury</p>
+                        <p className="text-white">Or Nothing.</p>
                     </motion.div>
                     <div className="w-[60%] h-[1px] bg-gradient-to-r from-[#FEEF88] to-transparent rounded-full mx-0"></div>
                     <p className="pt-8 text-[14px] md:text-[20px] w-[80%] mx-0 font-normal text-[#FFFFFF]">
@@ -464,7 +465,7 @@ const Hero = () => {
                     {/* Highlight container */}
                     <motion.div
                         variants={cardVariants}
-                        className="w-[170px] md:w-[200px] highlight-box border-[1.5px] border-[#feef88] rounded-[16px] p-[14px] md:p-[20px] md:rounded-[30px] z-10 space-y-2 md:space-y-4 absolute flex flex-col top-[-120px] md:top-[0px]">
+                        className="w-[170px] md:w-[200px] highlight-box border-[1.5px] border-[#feef88] rounded-[16px] p-[14px] md:p-[20px] md:rounded-[30px] z-10 space-y-2 md:space-y-4 absolute flex flex-col top-[-120px] md:top-[0px] text-white">
                         <div className="flex justify-between items-center relative">
                             <div className="bg-[#fee88e] text-[8px] md:text-[14px] text-black font-semibold rounded-full p-1 px-3 md:px-5">Featured</div>
                             <motion.div
@@ -475,7 +476,7 @@ const Hero = () => {
                             </motion.div>
                         </div>
                         <div className="flex flex-col space-y-1.5 md:space-y-3">
-                            <h1 className="text-[8px] md:text[16px]">Our best sellers</h1>
+                            <h1 className="text-[8px] md:text[16px] text-white">Our best sellers</h1>
                             <div className="w-[100%] h-[1px] bg-[#ccc] rounded-full"></div>
                         </div>
                         <div className="flex bg-[#cccccc39] p-[6px] md:p-[10px] rounded-[8px]">
