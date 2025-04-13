@@ -76,7 +76,7 @@ const ContactForm = () => {
                 </div>
 
                 <motion.div
-                    className="w-full md:w-[350px] h-[550px]  min-h-[220px] md:h-[350px] bg-[#d4d4d4] border-2 border-white rounded-[10px] md:rounded-[20px] p-3 md:p-6 space-y-3 md:space-y-6 flex flex-col justify-between mb-4 md:mb-0"
+                    className="w-full md:w-[350px] h-[450px]  min-h-[220px] md:h-[350px] bg-[#d4d4d4] border-2 border-white rounded-[10px] md:rounded-[20px] p-3 md:p-6 space-y-3 md:space-y-6 flex flex-col justify-between mb-4 md:mb-0"
                     initial={{ scale: 0.9, opacity: 0 }} // Initial state: slightly smaller and invisible
                     whileInView={{ scale: 1, opacity: 1 }} // Animate to: full size and visible
                     transition={{ duration: 0.6, delay: 0.3 }} // Animation duration with delay
