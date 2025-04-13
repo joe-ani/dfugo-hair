@@ -26,13 +26,23 @@
 
 html {
   scroll-behavior: smooth;
-
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: 'Clash Display', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure consistent text rendering in Safari */
+@supports (-webkit-overflow-scrolling: touch) {
+  .text-[#FFFFFF],
+  .text-white {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF;
+  }
 }
 
 .highlight-box {
@@ -43,7 +53,6 @@ body {
   right: -40px;
   margin-left: 30px;
 }
-
 
 .fade-boundary {
   background-image: linear-gradient(to top, #111111, #11111100);
@@ -68,8 +77,6 @@ body {
   filter: blur(8rem);
 }
 
-
-
 .hero::after {
   content: "";
   display: block;
@@ -88,7 +95,6 @@ body {
   background: #9696967a;
   backdrop-filter: blur(0.3em);
 }
-
 
 .latest-product-card {
   background: linear-gradient(to bottom, #dddddd, #b2b2b2);

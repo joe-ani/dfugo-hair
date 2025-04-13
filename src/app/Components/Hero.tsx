@@ -273,7 +273,7 @@ const Hero = () => {
                                 type="text"
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
-                                className="w-full px-6 py-3 rounded-full bg-[#ffffff10] text-white focus:outline-none focus:ring-2 focus:ring-[#FEEF88] transition-all text-left" // Changed text-center to text-left
+                                className="w-full px-6 py-3 rounded-full bg-[#ffffff10] text-[#FFFFFF] focus:outline-none focus:ring-2 focus:ring-[#FEEF88] transition-all text-left placeholder-[#ffffff90]"
                                 placeholder="Search products..."
                             />
                             <button
@@ -328,7 +328,7 @@ const Hero = () => {
                                 {["Home", "Shop", "Contact", "About"].map((link) => (
                                     <li
                                         key={link}
-                                        className={`relative cursor-pointer flex flex-col items-center ${activeLink === link ? "text-[#FEEF88]" : ""}`}
+                                        className={`relative cursor-pointer flex flex-col items-center ${activeLink === link ? "text-[#FEEF88]" : "text-[#FFFFFF]"}`}
                                         onClick={() => handleNavClick(link)}
                                     >
                                         <div>{link}</div>
@@ -391,7 +391,7 @@ const Hero = () => {
             <div className="cont2 w-full flex flex-col-reverse md:flex-row justify-around items-center px-8 md:px-20 lg:px-40 pb-10 mb-11 pt-28 mb:pt-0">
                 {/* Hero Text Section - Original styling */}
                 <div className="hero-text text-left pt-28 md:pt-0">
-                    <p className="py-3 font-normal text-sm md:text-base">D&apos;Fugo Hair</p>
+                    <p className="py-3 font-normal text-sm md:text-base text-[#FFFFFF]">D&apos;Fugo Hair</p>
 
                     <div className="w-[60%] h-[1px] bg-gradient-to-r from-[#FEEF88] to-transparent rounded-full mx-0"></div>
                     <motion.div
@@ -402,7 +402,7 @@ const Hero = () => {
                         <p className="text-[#FEEF88]">Luxury</p> Or Nothing.
                     </motion.div>
                     <div className="w-[60%] h-[1px] bg-gradient-to-r from-[#FEEF88] to-transparent rounded-full mx-0"></div>
-                    <p className="pt-8 text-[14px] md:text-[20px] w-[80%] mx-0 font-normal">
+                    <p className="pt-8 text-[14px] md:text-[20px] w-[80%] mx-0 font-normal text-[#FFFFFF]">
                         &quot;We offer all types of premium and high-quality wigs.&quot;
                     </p>
                     <div ref={actionsRef} className="quickact flex space-x-5 md:flex-row space-y-3 md:space-y-0 md:space-x-3 py-4 items-start md:items-center">
@@ -420,7 +420,7 @@ const Hero = () => {
                             whileTap={{ scale: 0.9 }}
                             className="flex flex-col relative cursor-pointer"
                             onClick={() => scrollToSection('section3')}>
-                            <div className="font-medium text-sm md:text-base">Locate Us</div>
+                            <div className="font-medium text-sm md:text-base text-[#FFFFFF]">Locate Us</div>
                             <div className="bg-[#cccccc5a] h-[2px] w-full rounded-full"></div>
                         </motion.div>
                     </div>
