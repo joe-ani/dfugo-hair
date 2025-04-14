@@ -23,11 +23,11 @@ export const metadata: Metadata = {
     email: true,
     address: true,
   },
-  metadataBase: new URL('https://dfugohair.com'),
+  metadataBase: new URL('https://dfugohair.com.ng'),
   openGraph: {
     title: "D'Fugo Hair - Premium Quality Hair Products",
     description: "Luxury hair products and accessories. We offer all types of premium and high-quality wigs. Visit our store in Lagos Island or shop online.",
-    url: 'https://dfugohair.com',
+    url: 'https://dfugohair.com.ng',
     siteName: "D'Fugo Hair",
     images: [
       {
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     google: 'your-google-verification-code',
   },
   alternates: {
-    canonical: 'https://dfugohair.com',
+    canonical: 'https://dfugohair.com.ng',
   },
   robots: {
     index: true,
@@ -82,22 +82,22 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/icons/sitelogo-192x192.png', sizes: '192x192', type: 'image/png' },
-      { url: '/icons/sitelogo-384x384.png', sizes: '384x384', type: 'image/png' },
-      { url: '/icons/sitelogo-512x512.png', sizes: '512x512', type: 'image/png' },
-      { url: '/icons/sitelogo.png', sizes: '32x32', type: 'image/png' },
-      { url: '/icons/sitelogo.png', sizes: '16x16', type: 'image/png' }
+      { url: '/icons/sitelogo3-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icons/sitelogo3-384x384.png', sizes: '384x384', type: 'image/png' },
+      { url: '/icons/sitelogo3-512x512.png', sizes: '512x512', type: 'image/png' },
+      { url: '/icons/sitelogo3.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icons/sitelogo3.png', sizes: '16x16', type: 'image/png' }
     ],
     apple: [
-      { url: '/icons/sitelogo-192x192.png', sizes: '192x192', type: 'image/png' },
-      { url: '/icons/sitelogo-384x384.png', sizes: '384x384', type: 'image/png' },
-      { url: '/icons/sitelogo-512x512.png', sizes: '512x512', type: 'image/png' }
+      { url: '/icons/sitelogo3-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icons/sitelogo3-384x384.png', sizes: '384x384', type: 'image/png' },
+      { url: '/icons/sitelogo3-512x512.png', sizes: '512x512', type: 'image/png' }
     ],
-    shortcut: [{ url: '/icons/sitelogo-192x192.png', sizes: '192x192', type: 'image/png' }],
+    shortcut: [{ url: '/icons/sitelogo3-192x192.png', sizes: '192x192', type: 'image/png' }],
     other: [
       {
         rel: 'apple-touch-icon',
-        url: '/icons/sitelogo-192x192.png'
+        url: '/icons/sitelogo3-192x192.png'
       }
     ]
   }
