@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "D'Fugo Hair - Premium Quality Hair Products",
     description: "Luxury hair products and accessories. We offer all types of premium and high-quality wigs. Visit our store in Lagos Island or shop online.",
-    url: 'https://dfugohair.com.ng',
+    url: 'https://dfugohair.com.ng', 
     siteName: "D'Fugo Hair",
     images: [
       {

@@ -4,6 +4,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import ClientMap from './ClientMap';
+import VideoCarousel from './VideoCarousel';
 
 const OpeningHours = () => {
   const controls = useAnimation();
@@ -51,7 +52,7 @@ const OpeningHours = () => {
         duration: 2,
         repeat: Infinity,
         ease: "easeInOut"
-      } 
+      }
     }
   };
 
@@ -128,15 +129,10 @@ const OpeningHours = () => {
           {/* Image shop and map */}
           <div className="h-full w-full md:absolute md:w-full">
             {/* Image */}
+            {/* ---------------------------------------------------------- */}
+            {/* Feature: create image, video caursel with fade transition */}
             <div className="relative h-full w-full">
-              <Image
-                className="object-cover scale-[1] md:scale-100 object-[50%_45%] md:object-[-80%_center]"
-                fill
-                sizes="(max-width: 768px) 200px, 100vw"
-                src="/images/shop.png"
-                alt="fugo shop"
-                priority
-              />
+              <VideoCarousel />
               {/* image fade overlay */}
               <div className="hidden md:block top-0 left-0 w-full h-full absolute rounded-[10px] md:rounded-[30px] bg-gradient-to-r from-black to-transparent"></div>
             </div>

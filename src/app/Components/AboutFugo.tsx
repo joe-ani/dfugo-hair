@@ -1,7 +1,7 @@
 "use client";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import MediaCarousel from "./MediaCarousel";
 
 const AboutFugo = () => {
     const [isExpanded, setIsExpanded] = useState(false);
@@ -15,13 +15,7 @@ const AboutFugo = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
             >
-                <Image
-                    className="w-full h-full object-cover"
-                    width={2000}
-                    height={600}
-                    src={"/images/fugopic.png"}
-                    alt={""}
-                />
+                <MediaCarousel />
                 <div className="absolute w-full h-full bg-gradient-to-b from-black top-0"></div>
                 <motion.div
                     className="flex flex-col z-10 absolute top-8 text-white p-8 sm:p-16 space-y-6 sm:space-y-8"

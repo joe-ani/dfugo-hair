@@ -30,7 +30,7 @@ type AppwriteError = {
 };
 
 // Interface for product data structure
-interface Product {
+interface Product {  
     $id: string;          // Unique identifier from Appwrite
     name: string;         // Product name
     price: string;        // Product price
@@ -290,7 +290,7 @@ const AdminPage = () => {
     };
 
     if (!isAuthorized) {
-        return null; // or return a loading state
+        return null; // or return a loading state 
     }
 
     const imageVariants: Variants = {
