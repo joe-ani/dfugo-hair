@@ -16,7 +16,7 @@ const media: MediaItem[] = [
 
 const MediaCarousel = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [error, setError] = useState(false);
+    // const [error, setError] = useState(false);
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -25,9 +25,9 @@ const MediaCarousel = () => {
         return () => clearInterval(timer);
     }, []);
 
-    const handleError = () => {
-        setError(true);
-    };
+    // const handleError = () => {
+    //     setError(true);
+    // };
 
     const currentMedia = media[currentIndex];
 
@@ -49,7 +49,7 @@ const MediaCarousel = () => {
                         muted
                         loop
                         playsInline
-                        onError={handleError}
+                        // onError={handleError}
                     >
                         <source src={currentMedia.src} type="video/mp4" />
                     </motion.video>
