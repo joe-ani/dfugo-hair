@@ -9,8 +9,11 @@ type MediaItem = {
 };
 
 const media: MediaItem[] = [
-    { type: 'video', src: '/video/websiteclip1.mp4' },
+    { type: 'image', src: '/images/shop9.jpg' },
+    { type: 'video', src: '/video/websiteclip4.mp4' },
     { type: 'image', src: '/images/fugopic.png' },
+    { type: 'image', src: '/images/fugopic3.jpg' },
+    { type: 'image', src: '/images/shop10.jpg' },
 
 ];
 

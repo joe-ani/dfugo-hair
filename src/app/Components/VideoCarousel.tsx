@@ -12,8 +12,11 @@ const mediaItems: MediaItem[] = [
     { type: 'video', src: '/video/websiteclip1.mp4' },
     { type: 'image', src: '/images/shop.png' },
     { type: 'image', src: '/images/shop2.jpg' },
+    { type: 'image', src: '/images/shop10.jpg' },
+    { type: 'video', src: '/video/websiteclip5.mp4' },
     { type: 'video', src: '/video/websiteclip4.mp4' },
-    { type: 'video', src: '/video/websiteclip3.mp4' },
+    { type: 'video', src: '/video/websiteclip3.mp4' }, 
+    { type: 'video', src: '/video/websiteclip2.mp4' }, 
 ];
 
 const VideoCarousel = () => {
