@@ -150,7 +150,7 @@ const Footer = () => {
                     <div>
                         <h3 className="text-lg font-medium mb-4">Follow Us</h3>
                         <div className="flex space-x-4">
-                            <a href="https://www.facebook.com/dfugohair" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
+                            <a href="https://web.facebook.com/dfugohair/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">
                                 FB
                             </a>
                             <a href="https://www.tiktok.com/@d_fugo_hair" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition">

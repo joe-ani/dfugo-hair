@@ -144,7 +144,7 @@ const ContactForm = () => {
 
                     {/* facebook */}
                     <motion.a
-                        href="https://wa.me/2347016027618?text=Hello!%20I'm%20interested%20in%20your%20wigs.%20"
+                        href="https://web.facebook.com/dfugohair/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center space-x-2 md:space-x-4 p-2 rounded cursor-pointer"
